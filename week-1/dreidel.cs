@@ -7,6 +7,9 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Week1.Function.models;
+using System.Net;
+using System.Text;
 
 namespace Week1.Function
 {
@@ -19,15 +22,31 @@ namespace Week1.Function
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string name = req.Query["name"];
+            DreidelValue[] DreidelArray = {
+                new DreidelValue(){
+                    Name = "Nun",
+                    Value = "נ"
+                },
+                new DreidelValue(){
+                    Name = "Gimmel",
+                    Value = "ג"
+                },
+                new DreidelValue(){
+                    Name = "Hay",
+                    Value = "ה"
+                },
+                new DreidelValue(){
+                    Name = "Shin",
+                    Value = "ש"
+                }
+            };
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+            Random rnd = new Random();
+            int i = rnd.Next(4);
 
-            return name != null
-                ? (ActionResult)new OkObjectResult($"Hello, {name}")
-                : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+            DreidelValue response = DreidelArray[i];
+
+            return (ActionResult)new OkObjectResult(response);
         }
     }
 }
