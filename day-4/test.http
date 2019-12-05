@@ -1,0 +1,46 @@
+@baseUrl = http://localhost:7071
+
+
+
+# @name potluck_added
+POST {{baseUrl}}/api/potluck
+content-type: application/json
+
+{
+    "name": "samuele",
+    "item": "pasta",
+    "quantity": 3
+}
+
+###
+
+@id = {{potluck_added.response.body.$.insertedId}}
+
+
+# @name potluck_id
+{{baseUrl}}/api/potluck/{{id}}
+
+###
+
+# @name potluck_list
+{{baseUrl}}/api/potluck
+
+###
+
+
+###
+
+# @name potluck_updated
+PATCH {{baseUrl}}/api/potluck/{{id}}
+content-type: application/json
+
+{
+    "quantity": 4
+}
+
+###
+
+# @name potluck_deleted
+DELETE {{baseUrl}}/api/potluck/{{id}}
+
+

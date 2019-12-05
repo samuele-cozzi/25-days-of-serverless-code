@@ -69,13 +69,30 @@
         },
         {
             "type": "func",
-            "dependsOn": "build",
-            "options": {
-                "cwd": "${workspaceFolder}/week-1/bin/Debug/netcoreapp2.1"
-            },
             "command": "host start",
+            "problemMatcher": "$func-watch",
             "isBackground": true,
-            "problemMatcher": "$func-watch"
+            "dependsOn": "npm install",
+            "options": {
+                "cwd": "${workspaceFolder}/day-4"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "npm install",
+            "command": "npm install",
+            "options": {
+                "cwd": "${workspaceFolder}/day-4"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "npm prune",
+            "command": "npm prune --production",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/day-4"
+            }
         }
     ]
 }
