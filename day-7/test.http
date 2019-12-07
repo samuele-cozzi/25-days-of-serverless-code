@@ -1,0 +1,16 @@
+@baseUrl = https://api.unsplash.com
+@accessKey = 0ee7202244fe9a8aee93b5fe9e2a35e7b237bd5a52c621cf7d7d0602289f6065
+
+
+###
+
+
+# @name search_picture_get
+GET http://localhost:7071/api/Guatemala?query=google
+content-type: application/json
+
+###
+
+# @name search_picture_post
+GET http://localhost:7071/api/Guatemala?query=google
+content-type: application/json
