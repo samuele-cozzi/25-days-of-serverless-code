@@ -2,6 +2,23 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "type": "shell",
+            "label": "npm install",
+            "command": "npm install",
+            "options": {
+                "cwd": "${workspaceFolder}/day-4"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "npm prune",
+            "command": "npm prune --production",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/day-4"
+            }
+        },
+        {
             "label": "clean",
             "command": "dotnet",
             "args": [
@@ -12,7 +29,7 @@
             "type": "process",
             "problemMatcher": "$msCompile",
             "options": {
-                "cwd": "${workspaceFolder}/week-1"
+                "cwd": "${workspaceFolder}/day-6"
             }
         },
         {
@@ -31,7 +48,7 @@
             },
             "problemMatcher": "$msCompile",
             "options": {
-                "cwd": "${workspaceFolder}/week-1"
+                "cwd": "${workspaceFolder}/day-6"
             }
         },
         {
@@ -47,7 +64,7 @@
             "type": "process",
             "problemMatcher": "$msCompile",
             "options": {
-                "cwd": "${workspaceFolder}/week-1"
+                "cwd": "${workspaceFolder}/day-6"
             }
         },
         {
@@ -64,35 +81,18 @@
             "dependsOn": "clean release",
             "problemMatcher": "$msCompile",
             "options": {
-                "cwd": "${workspaceFolder}/week-1"
+                "cwd": "${workspaceFolder}/day-6"
             }
         },
         {
             "type": "func",
+            "dependsOn": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/day-6/bin/Debug/netcoreapp2.1"
+            },
             "command": "host start",
-            "problemMatcher": "$func-watch",
             "isBackground": true,
-            "dependsOn": "npm install",
-            "options": {
-                "cwd": "${workspaceFolder}/day-4"
-            }
-        },
-        {
-            "type": "shell",
-            "label": "npm install",
-            "command": "npm install",
-            "options": {
-                "cwd": "${workspaceFolder}/day-4"
-            }
-        },
-        {
-            "type": "shell",
-            "label": "npm prune",
-            "command": "npm prune --production",
-            "problemMatcher": [],
-            "options": {
-                "cwd": "${workspaceFolder}/day-4"
-            }
+            "problemMatcher": "$func-watch"
         }
     ]
 }
