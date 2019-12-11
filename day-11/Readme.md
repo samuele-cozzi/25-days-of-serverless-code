@@ -26,7 +26,8 @@ As a bonus challenge: kids would love a nice UI to input their wishes. Help them
 
 ### Dependencies
 
-npm install -s mongodb
+npm install -s documentdb
+npm install -s axios 
 
 ### Run
 

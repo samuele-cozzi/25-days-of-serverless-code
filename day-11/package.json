@@ -6,6 +6,8 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "documentdb": "^1.15.3",
     "mongodb": "^3.4.0"
   },
   "devDependencies": {}

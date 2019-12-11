@@ -1,0 +1,14 @@
+{
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "day-11-leases",
+      "connectionStringSetting": "25daysofserverless_DOCUMENTDB",
+      "databaseName": "25serverless",
+      "collectionName": "day-11",
+      "createLeaseCollectionIfNotExists": "true"
+    }
+  ]
+}
