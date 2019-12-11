@@ -16,8 +16,8 @@ Santa needs an endpoint that receives data in this format:
 
    - a description of the wish
    - who it's from
-    - address
-    - type of present (e.g toy, clothes, animal etc..)
+   - address
+   - type of present (e.g toy, clothes, animal etc..)
 
 Santa should be able to query that database on his own (he's a bit of a micromanager — this helps keep him off the elves' back!), as well as having a message get posted to Slack or another chat service whenever data is added to the database.
 
