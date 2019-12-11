@@ -1,0 +1,14 @@
+@baseUrl = http://localhost:7071
+
+
+
+# @name potluck_added
+POST {{baseUrl}}/api/wishmaster
+content-type: application/json
+
+{
+    "wish": "barbie",
+    "name": "sofia",
+    "address": "via primo maggio 1 ,milano",
+    "type": "toy"
+}

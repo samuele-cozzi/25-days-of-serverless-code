@@ -39,7 +39,29 @@ namespace Day7.Function
 
                 log.LogInformation(resultContent);
 
-                return (ActionResult)new OkObjectResult(resultContent);
+                if (req.Method == HttpMethod.Get.ToString())
+                {
+                    var result_object = JsonConvert.DeserializeObject<UnspashResponse>(resultContent);
+
+                    // var response = req.CreateResponse(HttpStatusCode.OK, "<img src='" + result_object.results[0].urls.raw + "'></img>");
+                    // response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
+
+                    // return response;
+
+                    // var response = new HttpResponseMessage(HttpStatusCode.OK);
+                    // response.Content = new StringContent("ciao");
+                    // response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
+                    // return (ActionResult) response;
+
+                    req.HttpContext.Response.Headers.Add("Content-Type", "text/html");
+                    //req.HttpContext.Response.Body. = new StringContent("ciao");
+
+                    return null;
+                }
+                else
+                {
+                    return (ActionResult)new OkObjectResult(resultContent);
+                }
 
 
             }
