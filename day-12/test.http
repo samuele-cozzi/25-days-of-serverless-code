@@ -1,0 +1,9 @@
+@baseUrl = http://localhost:7071
+
+
+GET {{baseUrl}}/api/HolydaysCards?id=5c337e6627e661061f1c08c78aa4892d
+content-type: application/json
+
+###
+
+GET https://api.github.com/gists/5c337e6627e661061f1c08c78aa4892d
