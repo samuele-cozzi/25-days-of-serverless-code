@@ -27,7 +27,7 @@ npm install bluebird
 
 ### Run
 
-Try run [tests](test.html)
+Try run [tests](test.htpt)
 
 ## Resources/Tools Used rocket
 
