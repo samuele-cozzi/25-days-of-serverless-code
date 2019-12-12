@@ -21,11 +21,13 @@ As a bonus challenge: reading and parsing Markdown is a lot of work! To optimize
 ```
 npm install -s showdown
 npm install -s axios
+npm install redis
+npm install bluebird
 ```
 
 ### Run
 
-The documentation of function call [code](/test.html)
+Try run [tests](test.html)
 
 ## Resources/Tools Used rocket
 
@@ -44,6 +46,7 @@ Here are tools I used:
 Other helpful Resources can be found here:
 
 -   ✅ **[Azure Functions documentation](https://docs.microsoft.com/azure/azure-functions?WT.mc_id=25daysofserverless-github-sakriema)**
+-   ✅ **[Azure Redis Cache documentation](https://docs.microsoft.com/en-us/azure/azure-cache-for-redis/cache-nodejs-get-started)**
 -   ✅ **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=25daysofserverless-github-sakriema)**
 -   ✅ **[Create your first function using Visual Studio Code](https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-vs-code?WT.mc_id=25daysofserverless-github-sakriema)**
 -   ✅ **[Azure Functions Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions&WT.mc_id=25daysofserverless-github-sakriema)**
