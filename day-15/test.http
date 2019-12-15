@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:7071
+
+
+GET https://api.unsplash.com/photos/Sa17Oixskk0
+content-type: application/json
+Authorization: Client-ID 0ee7202244fe9a8aee93b5fe9e2a35e7b237bd5a52c621cf7d7d0602289f6065
+
+
+###
+
+POST https://25daysofserverless-day15.cognitiveservices.azure.com/vision/v2.0/analyze?visualFeatures=Categories&language=en
+Host: northeurope.api.cognitive.microsoft.com
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: ce07243101514d7781fbae781fd0c29c
+
+{"url":"https://images.unsplash.com/photo-1521412895119-4acde85a8ca0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEwNTM5Mn0"}
+
+###
+
+GET http://localhost:7071/api/ImageDescriber?id=Sa17Oixskk0

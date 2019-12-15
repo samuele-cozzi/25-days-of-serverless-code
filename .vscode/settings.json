@@ -1,5 +1,5 @@
 {
-    "azureFunctions.deploySubpath": "day-12",
+    "azureFunctions.deploySubpath": "day-15",
     "azureFunctions.projectLanguage": "JavaScript",
     "azureFunctions.projectRuntime": "~2",
     "debug.internalConsoleOptions": "neverOpen",

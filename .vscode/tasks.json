@@ -74,7 +74,7 @@
             "isBackground": true,
             "dependsOn": "npm install",
             "options": {
-                "cwd": "${workspaceFolder}/day-12"
+                "cwd": "${workspaceFolder}/day-15"
             }
         },
         {
@@ -82,7 +82,7 @@
             "label": "npm install",
             "command": "npm install",
             "options": {
-                "cwd": "${workspaceFolder}/day-12"
+                "cwd": "${workspaceFolder}/day-15"
             }
         },
         {
@@ -91,7 +91,7 @@
             "command": "npm prune --production",
             "problemMatcher": [],
             "options": {
-                "cwd": "${workspaceFolder}/day-12"
+                "cwd": "${workspaceFolder}/day-15"
             }
         }
     ]
